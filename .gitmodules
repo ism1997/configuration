@@ -4,3 +4,6 @@
 [submodule ".emacs-profiles/doom"]
 	path = .emacs-profiles/doom
 	url = https://github.com/hlissner/doom-emacs.git
+[submodule ".emacs-profiles/witchmacs"]
+	path = .emacs-profiles/witchmacs
+	url = https://github.com/snackon/Witchmacs.git
