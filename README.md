@@ -34,4 +34,4 @@ Taken straight from Atlassian<sup><a id="fnr.1" class="footref" href="#fn.1">1</
 
 <sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> [The best way to store your dotfiles: A bare Git repository](https://www.atlassian.com/git/tutorials/dotfiles)
 
-<sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <https://www.ackama.com/blog/posts/the-best-way-to-store-your-dotfiles-a-bare-git-repository-explained>
+<sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> [The best way to store your dotfiles: A bare Git repository ****EXPLAINED****](https://www.ackama.com/blog/posts/the-best-way-to-store-your-dotfiles-a-bare-git-repository-explained)
