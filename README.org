@@ -1,4 +1,5 @@
-#+TITLE: Readme
+#+TITLE: Configuration with Git
+#+AUTHOR: Ismaïl
 
 * Steps to achieve this from scratch
 
@@ -8,6 +9,7 @@
     cfg config --local status.showUntrackedFiles no
     echo "alias cfg='/usr/bin/git --git-dir=$HOME/.configuration/ --work-tree=$HOME'" >> $HOME/.bashrc
 #+END_SRC
+
 
 * Replicate this configuration on other machines
 
@@ -19,7 +21,17 @@
     cfg config --local status.showUntrackedFiles no
 #+END_SRC
 
-Taken straight from Atlassian[fn:1].
+Taken straight from Atlassian[fn:1][fn:2].
+
+
+* In PowerShell
+
+#+BEGIN_SRC powershell
+    git init --bare $HOME/.configuration
+    function Get-Configuration { & git-dir=$HOME/.configuration/ --work-tree=$HOME $args }
+    New-Alias -Name cfg -Value Get-Configuration
+    cfg config --local status.showUntrackedFiles no
+#+END_SRC
 
 * References
 
