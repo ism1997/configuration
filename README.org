@@ -1,0 +1,27 @@
+#+TITLE: Readme
+
+* Steps to achieve this from scratch
+
+#+BEGIN_SRC bash
+    git init --bare $HOME/.configuration
+    alias cfg='/usr/bin/git --git-dir=$HOME/.configuration/ --work-tree=$HOME'
+    cfg config --local status.showUntrackedFiles no
+    echo "alias cfg='/usr/bin/git --git-dir=$HOME/.configuration/ --work-tree=$HOME'" >> $HOME/.bashrc
+#+END_SRC
+
+* Replicate this configuration on other machines
+
+#+BEGIN_SRC bash
+    echo ".configuration" >> .gitignore
+    git clone --bare https://github.com/ism1997/configuration $HOME/.configuration
+    alias cfg='/usr/bin/git --git-dir=$HOME/.configuration/ --work-tree=$HOME'
+    cfg checkout
+    cfg config --local status.showUntrackedFiles no
+#+END_SRC
+
+Taken straight from Atlassian[fn:1].
+
+* References
+
+[fn:1] [[https://www.atlassian.com/git/tutorials/dotfiles][The best way to store your dotfiles: A bare Git repository]]
+[fn:2] [[https://www.ackama.com/blog/posts/the-best-way-to-store-your-dotfiles-a-bare-git-repository-explained]]
