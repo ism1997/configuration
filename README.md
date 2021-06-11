@@ -1,14 +1,4 @@
 
-# Table of Contents
-
-1.  [Steps to achieve this from scratch](#orgb7cf482)
-2.  [Replicate this configuration on other machines](#org62377a8)
-3.  [In PowerShell](#org1511510)
-4.  [References](#org2412e1a)
-
-
-
-<a id="orgb7cf482"></a>
 
 # Steps to achieve this from scratch
 
@@ -17,8 +7,6 @@
     cfg config --local status.showUntrackedFiles no
     echo "alias cfg='/usr/bin/git --git-dir=$HOME/.configuration/ --work-tree=$HOME'" >> $HOME/.bashrc
 
-
-<a id="org62377a8"></a>
 
 # Replicate this configuration on other machines
 
@@ -31,19 +19,12 @@
 Taken straight from Atlassian<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup><sup>, </sup><sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup>.
 
 
-<a id="org1511510"></a>
-
 # In PowerShell
 
     git init --bare $HOME/.configuration
     function Get-Configuration { & git-dir=$HOME/.configuration/ --work-tree=$HOME $args }
     New-Alias -Name cfg -Value Get-Configuration
     cfg config --local status.showUntrackedFiles no
-
-
-<a id="org2412e1a"></a>
-
-# References
 
 
 # Footnotes

@@ -1,5 +1,6 @@
 #+TITLE: Configuration with Git
 #+AUTHOR: Ismaïl
+#+OPTIONS: toc:nil
 
 * Steps to achieve this from scratch
 
@@ -33,7 +34,6 @@ Taken straight from Atlassian[fn:1][fn:2].
     cfg config --local status.showUntrackedFiles no
 #+END_SRC
 
-* References
 
 [fn:1] [[https://www.atlassian.com/git/tutorials/dotfiles][The best way to store your dotfiles: A bare Git repository]]
 [fn:2] [[https://www.ackama.com/blog/posts/the-best-way-to-store-your-dotfiles-a-bare-git-repository-explained]]
