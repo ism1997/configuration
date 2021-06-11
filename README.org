@@ -6,21 +6,21 @@
 ** Steps to achieve this from scratch
 
 #+BEGIN_SRC bash
-    git init --bare $HOME/.configuration
-    alias cfg='/usr/bin/git --git-dir=$HOME/.configuration/ --work-tree=$HOME'
-    cfg config --local status.showUntrackedFiles no
-    echo "alias cfg='/usr/bin/git --git-dir=$HOME/.configuration/ --work-tree=$HOME'" >> $HOME/.bashrc
+git init --bare $HOME/.configuration
+alias cfg='/usr/bin/git --git-dir=$HOME/.configuration/ --work-tree=$HOME'
+cfg config --local status.showUntrackedFiles no
+echo "alias cfg='/usr/bin/git --git-dir=$HOME/.configuration/ --work-tree=$HOME'" >> $HOME/.bashrc
 #+END_SRC
 
 
 ** Replicate this configuration on other machines
 
 #+BEGIN_SRC bash
-    echo ".configuration" >> .gitignore
-    git clone --bare https://github.com/ism1997/configuration $HOME/.configuration
-    alias cfg='/usr/bin/git --git-dir=$HOME/.configuration/ --work-tree=$HOME'
-    cfg checkout
-    cfg config --local status.showUntrackedFiles no
+echo ".configuration" >> .gitignore
+git clone --bare https://github.com/ism1997/configuration $HOME/.configuration
+alias cfg='/usr/bin/git --git-dir=$HOME/.configuration/ --work-tree=$HOME'
+cfg checkout
+cfg config --local status.showUntrackedFiles no
 #+END_SRC
 
 Taken straight from Atlassian[fn:1][fn:2].
@@ -29,10 +29,10 @@ Taken straight from Atlassian[fn:1][fn:2].
 * In PowerShell
 
 #+BEGIN_SRC powershell
-    git init --bare $HOME/.configuration
-    function Get-Configuration { & git-dir=$HOME/.configuration/ --work-tree=$HOME $args }
-    New-Alias -Name cfg -Value Get-Configuration
-    cfg config --local status.showUntrackedFiles no
+git init --bare $HOME/.configuration
+function Get-Configuration { & git-dir=$HOME/.configuration/ --work-tree=$HOME $args }
+New-Alias -Name cfg -Value Get-Configuration
+cfg config --local status.showUntrackedFiles no
 #+END_SRC
 
 
