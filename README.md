@@ -1,4 +1,7 @@
-# Steps to achieve this from scratch
+# The Bash way
+
+
+## Steps to achieve this from scratch
 
 ```bash
     git init --bare $HOME/.configuration
@@ -8,7 +11,7 @@
 ```
 
 
-# Replicate this configuration on other machines
+## Replicate this configuration on other machines
 
 ```bash
     echo ".configuration" >> .gitignore
